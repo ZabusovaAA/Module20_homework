@@ -1,4 +1,4 @@
-//10.3 задание 2 - ќпредел¤ем тип переменной
+//10.3 задание 2 - Определяем тип переменной
 
 const x = null;
 switch (typeof(x)) {
@@ -11,4 +11,4 @@ switch (typeof(x)) {
   case 'boolean':
     console.log('х - логическа¤ переменна¤');
     break;
-  default: console.log('“ип х не определен');
+  default: console.log('Тип х не определен');

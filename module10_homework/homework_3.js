@@ -1,4 +1,4 @@
-//10.4 задание 3 - инвертируем строку
+//10.4 задание 3 - Инвертируем строку
 
 const str = 'I love JavaScript';
 const arr = str.split('');
