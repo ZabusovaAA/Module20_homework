@@ -1,7 +1,7 @@
-//10.4 задание 3 - Инвертируем строку
+//10.4 Р·Р°РґР°РЅРёРµ 3 - РёРЅРІРµСЂС‚РёСЂСѓРµРј СЃС‚СЂРѕРєСѓ
 
 const str = 'I love JavaScript';
 const arr = str.split('');
-const reverse_arr = arr.reverse();
+const reverse_arr = [...arr].reverse(); // РЎРѕР·РґР°РµРј РєРѕРїРёСЋ РјР°СЃСЃРёРІР°
 const reverse_str = reverse_arr.join('');
 console.log(reverse_str);

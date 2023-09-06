@@ -1,14 +1,14 @@
-//10.3 задание 2 - Определяем тип переменной
+//10.3 Р·Р°РґР°РЅРёРµ 2 - СњРїСЂРµРґРµР»В¤РµРј С‚РёРї РїРµСЂРµРјРµРЅРЅРѕР№
 
 const x = null;
 switch (typeof(x)) {
   case 'number':
-    console.log('х - число');
+    console.log('С… - С‡РёСЃР»Рѕ');
     break;
   case 'string':
-    console.log('х - строка');
+    console.log('С… - СЃС‚СЂРѕРєР°');
     break;
   case 'boolean':
-    console.log('х - логическая переменная');
+    console.log('С… - Р»РѕРіРёС‡РµСЃРєР°В¤ РїРµСЂРµРјРµРЅРЅР°В¤');
     break;
-  default: console.log('Тип х не определен');
+  default: console.log('вЂњРёРї С… РЅРµ РѕРїСЂРµРґРµР»РµРЅ');
