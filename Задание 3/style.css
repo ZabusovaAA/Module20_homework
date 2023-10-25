@@ -32,8 +32,8 @@ body{
 }
 
 .button{
-   width:270px;
-   height:51px;
+   width:180px;
+   height:35px;
    font-family: NunitoI;
    font-size: 25px;
    font-weight: 400;
@@ -80,9 +80,52 @@ body{
 
 .result {
    display: flex;
-   flex-wrap: wrap;
-   width: 500px;   
+   flex-direction: column;
+   flex-wrap: nowrap;
+   width: 630px;   
    justify-content: center;
-   margin-top: 50px;
+   margin-top: 10px;
    color: rgba(255, 255, 255, 0.50);
+   background-color: antiquewhite;
+   border-radius: 10px;
+   align-items: flex-end;
+}
+ 
+ .card {
+   width: 200px;
+   margin: 5px;
+   color: black;
+   font-family: Nunito;
+   font-size: 13px;
+   line-height: 163.68%;
+   border: 1px solid #363636;
+   border-radius: 3px;
+   background: #FFF;
+   word-wrap: break-word;
+   padding-left: 5px;
  }
+
+ .response {
+   width: 200px;
+   margin: 5px;
+   color: black;
+   font-family: Nunito;
+   font-size: 13px;
+   line-height: 163.68%;
+   border: 1px solid #363636;
+   border-radius: 3px;
+   background: #FFF;
+   align-self: flex-start;
+   word-wrap: break-word;
+   padding-left: 5px;
+ }
+ 
+ .card-image {
+   display: block;
+   width: 200px;
+   height: 150px;
+ }
+
+a {
+   text-decoration: none;
+}
