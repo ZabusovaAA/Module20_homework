@@ -33,7 +33,7 @@ class Config {
 	}
 }
 
-class Berry {
+class Food {
     constructor( canvas ) {
         this.x = 0;
         this.y = 0;
@@ -62,35 +62,39 @@ class Snake {
 		this.control();
 	}
 
-	update( berry, score, canvas ) {
+	update( food, score, canvas ) {
 		this.x += this.dx;
 		this.y += this.dy;	
 		if (this.x < 0) {
-			this.x = canvas.element.width - this.config.sizeCell;
+			//this.x = canvas.element.width - this.config.sizeCell;
+			this.gameover();
 		} else if ( this.x >= canvas.element.width ) {
-			this.x = 0;
+			//this.x = 0;
+			this.gameover();
 		}	
 		if (this.y < 0) {
-			this.y = canvas.element.height - this.config.sizeCell;
+			//this.y = canvas.element.height - this.config.sizeCell;
+			this.gameover();
 		} else if ( this.y >= canvas.element.height ) {
-			this.y = 0;
+			//this.y = 0;
+			this.gameover();
 		}	
 		this.tails.unshift( { x: this.x, y: this.y } );	
 		if ( this.tails.length > this.maxTails ) {
 			this.tails.pop();
 		}	
 		this.tails.forEach( (el, index) => {	
-			if ( el.x === berry.x && el.y === berry.y ) {
+			if ( el.x === food.x && el.y === food.y ) {
 				this.maxTails++;
 				score.incScore();
-				berry.randomCoords();
+				food.randomCoords();
 			}
 	
 			for( let i = index + 1; i < this.tails.length; i++ ) {	
 				if ( el.x == this.tails[i].x && el.y == this.tails[i].y ) {
 					this.gameover();
 					score.setToZero();
-					berry.randomCoords();
+					food.randomCoords();
 				}	
 			}	
 		} );
@@ -188,17 +192,17 @@ class Game {
     constructor( box ) {
         this.canvas = new Field( box );
         this.snake = new Snake();
-        this.berry = new Berry( this.canvas );
+        this.food = new Food( this.canvas );
         this.score = new Score( ".game-score .score-count", 0 );
         new GameLoop( this.update.bind(this), this.draw.bind(this) );
     }
     update() {
-        this.snake.update( this.berry, this.score, this.canvas );
+        this.snake.update( this.food, this.score, this.canvas );
     }
     draw() {
         this.canvas.context.clearRect( 0, 0, this.canvas.element.width, this.canvas.element.height );
         this.snake.draw( this.canvas.context );
-        this.berry.draw( this.canvas.context );
+        this.food.draw( this.canvas.context );
     }
 }
 
