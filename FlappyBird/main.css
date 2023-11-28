@@ -1,0 +1,21 @@
+body {
+	margin: 0px;
+	font-family: sans-serif;
+}
+
+#game {
+	background: rgb(132, 195, 204);
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	background-color: rgb(132, 195, 204);
+	border-radius: 5px;
+	border: 2px solid #161618;
+}
